@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: -0.011em;
+  }
+
+  body {
+    background-color: #EDE7D9;
+    color: #4B4237;
+    transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  html.dark body {
+    background-color: #000000 !important;
+    color: #EDE7D9 !important;
+  }
+
+  html:not(.dark) body {
+    background-color: #EDE7D9 !important;
+    color: #4B4237 !important;
+  }
+
+  .font-khmer {
+    font-family: 'Kantumruy Pro', 'Battambang', system-ui, sans-serif;
+    letter-spacing: normal;
+  }
+}
+
+/* Leaflet layer hierarchy tweaks */
+.leaflet-pane {
+  z-index: 10 !important;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 15 !important;
+}
+
+.custom-spot-marker,
+.custom-uni-marker {
+  background: transparent;
+  border: none;
+}
+
+/* Minimalist Dark Map Styling (True OLED Black Map with Warm Goldenrod Markers) */
+html.dark .leaflet-tile-pane {
+  filter: brightness(0.65) invert(1) contrast(1.25) hue-rotate(195deg) saturate(0.2);
+}
+
+html:not(.dark) .leaflet-tile-pane {
+  filter: sepia(0.08) contrast(1.02) saturate(0.95);
+}
+
+html.dark .leaflet-container {
+  background: #000000 !important;
+}
+
+html:not(.dark) .leaflet-container {
+  background: #EDE7D9 !important;
+}
+
+html.dark .leaflet-control-zoom a {
+  background-color: #0E0D0C !important;
+  color: #EDE7D9 !important;
+  border-color: rgba(164, 150, 148, 0.3) !important;
+}
+
+html.dark .leaflet-control-zoom a:hover {
+  background-color: #052B39 !important;
+  color: #EDE7D9 !important;
+}
+
+html:not(.dark) .leaflet-control-zoom a {
+  background-color: #FAF7F2 !important;
+  color: #4B4237 !important;
+  border-color: rgba(164, 150, 148, 0.35) !important;
+}
+
+html:not(.dark) .leaflet-control-zoom a:hover {
+  background-color: #EDE7D9 !important;
+  color: #052B39 !important;
+}
+
+/* Hide scrollbars for clean chip horizontal scrolling */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

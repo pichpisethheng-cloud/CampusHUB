@@ -1,0 +1,58 @@
+import { University } from '../types/spot';
+
+export const UNIVERSITIES: University[] = [
+  {
+    id: 'rupp',
+    name: 'Royal University of Phnom Penh (RUPP)',
+    nameKh: 'សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (RUPP)',
+    shortName: 'RUPP',
+    lat: 11.5684,
+    lng: 104.8906,
+    district: 'Toul Kork',
+  },
+  {
+    id: 'itc',
+    name: 'Institute of Technology of Cambodia (ITC)',
+    nameKh: 'វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា (តិចណូ)',
+    shortName: 'ITC',
+    lat: 11.5707,
+    lng: 104.8988,
+    district: 'Toul Kork',
+  },
+  {
+    id: 'num',
+    name: 'National University of Management (NUM)',
+    nameKh: 'សាកលវិទ្យាល័យជាតិគ្រប់គ្រង (NUM)',
+    shortName: 'NUM',
+    lat: 11.5732,
+    lng: 104.9205,
+    district: 'Daun Penh',
+  },
+  {
+    id: 'paragon',
+    name: 'Paragon International University',
+    nameKh: 'សាកលវិទ្យាល័យអន្តរជាតិផារ៉ាហ្គន',
+    shortName: 'Paragon U',
+    lat: 11.5772,
+    lng: 104.8875,
+    district: 'Toul Kork',
+  },
+  {
+    id: 'rule',
+    name: 'Royal University of Law and Economics (RULE)',
+    nameKh: 'សាកលវិទ្យាល័យភូមិន្ទនីតិសាស្ត្រ និងវិទ្យាសាស្ត្រសេដ្ឋកិច្ច (RULE)',
+    shortName: 'RULE',
+    lat: 11.5367,
+    lng: 104.9238,
+    district: 'Chamkarmon',
+  },
+  {
+    id: 'cadt',
+    name: 'Cambodia Academy of Digital Technology (CADT)',
+    nameKh: 'បណ្ឌិត្យសភាបច្ចេកវិទ្យាឌីជីថលកម្ពុជា (CADT)',
+    shortName: 'CADT',
+    lat: 11.6492,
+    lng: 104.9125,
+    district: 'Sen Sok',
+  },
+];
